@@ -1,0 +1,289 @@
+{% extends "partials/base.html" %}
+{% load static %}
+{% block title %}Dashboard{% endblock title %}
+{% block extra_css %}
+    <!-- jsvectormap css -->
+    <link href="{% static 'libs/jsvectormap/dist/css/jsvectormap.min.css' %}" rel="stylesheet" type="text/css"/>
+
+    <!--Swiper slider css-->
+    <link href="{% static 'libs/swiper/swiper-bundle.min.css' %}" rel="stylesheet" type="text/css"/>
+    <!--datatable css-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css"/>
+    <!--datatable responsive css-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+{% endblock extra_css %}
+
+{% block content %}
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+                {% block pagetitle %}
+                    {% include "partials/page-title.html" with pagetitle="Dashboards" title="Dashboard" %}
+                {% endblock pagetitle %}
+
+            </div>
+            <!-- container-fluid -->
+            <div class="row">
+                <div class="col-xl-3 col-md-6">
+                    <div class="card card-height-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-sm flex-shrink-0">
+                                            <span class="avatar-title bg-soft-warning text-warning rounded-2 fs-2">
+                                                <i class="bx bxs-user-account"></i>
+                                            </span>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <p class="text-uppercase fw-medium text-muted mb-3">Number of Users</p>
+                                    <h4 class="fs-4 mb-3"><span class="counter-value" data-target="7522">7,522</span>
+                                    </h4>
+                                    <p class="text-muted mb-0">From 9530 last year</p>
+                                </div>
+                                <div class="flex-shrink-0 align-self-center">
+                                    <span class="badge badge-soft-danger fs-12"><i
+                                            class="ri-arrow-down-s-line fs-13 align-middle me-1"></i>10.35 %<span></span></span>
+                                </div>
+                            </div>
+                        </div><!-- end card body -->
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <div class="card card-height-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-sm flex-shrink-0">
+                                            <span class="avatar-title bg-soft-warning text-warning rounded-2 fs-2">
+                                                <i class="bx bxs-user-account"></i>
+                                            </span>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <p class="text-uppercase fw-medium text-muted mb-3">Number of Users</p>
+                                    <h4 class="fs-4 mb-3"><span class="counter-value" data-target="7522">7,522</span>
+                                    </h4>
+                                    <p class="text-muted mb-0">From 9530 last year</p>
+                                </div>
+                                <div class="flex-shrink-0 align-self-center">
+                                    <span class="badge badge-soft-danger fs-12"><i
+                                            class="ri-arrow-down-s-line fs-13 align-middle me-1"></i>10.35 %<span></span></span>
+                                </div>
+                            </div>
+                        </div><!-- end card body -->
+                    </div>
+                </div> <!-- end col-->
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="card card-height-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-sm flex-shrink-0">
+                                            <span class="avatar-title bg-soft-danger text-danger rounded-2 fs-2">
+                                                <i class="bx bxs-badge-dollar"></i>
+                                            </span>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <p class="text-uppercase fw-medium text-muted mb-3">Total Revenue</p>
+                                    <h4 class="fs-4 mb-3">$<span class="counter-value"
+                                                                 data-target="2845.05">2,845.05</span></h4>
+                                    <p class="text-muted mb-0">From $1,750.04 last year</p>
+                                </div>
+                                <div class="flex-shrink-0 align-self-center">
+                                    <span class="badge badge-soft-success fs-12"><i
+                                            class="ri-arrow-up-s-line fs-13 align-middle me-1"></i>22.96 %<span></span></span>
+                                </div>
+                            </div>
+                        </div><!-- end card body -->
+                    </div>
+                </div> <!-- end col-->
+
+                <div class="col-xl-3 col-md-6">
+                    <div class="card card-height-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="avatar-sm flex-shrink-0">
+                                            <span class="avatar-title bg-soft-info text-info rounded-2 fs-2">
+                                                <i class="bx bx-store-alt"></i>
+                                            </span>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <p class="text-uppercase fw-medium text-muted mb-3">Number of Stores</p>
+                                    <h4 class="fs-4 mb-3"><span class="counter-value" data-target="405">405</span>k</h4>
+                                    <p class="text-muted mb-0">From 308 last year</p>
+                                </div>
+                                <div class="flex-shrink-0 align-self-center">
+                                    <span class="badge badge-soft-success fs-12"><i
+                                            class="ri-arrow-up-s-line fs-13 align-middle me-1"></i>16.31 %<span></span></span>
+                                </div>
+                            </div>
+                        </div><!-- end card body -->
+                    </div>
+                </div> <!-- end col-->
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Basic Datatables</h5>
+                        </div>
+                        <div class="card-body">
+                            <table id="example"
+                                   class="table table-bordered dt-responsive nowrap table-striped align-middle"
+                                   style="width:100%">
+                                <thead>
+                                <tr>
+                                    <th>Т/Р</th>
+                                    <th>Макоми</th>
+                                    <th>Мурожат юборилган вакт</th>
+                                    <th>Исми шарифи</th>
+                                    <th>Холат аникланган корхона</th>
+                                    <th>Мурожат матни</th>
+                                    <th>Жавоб бериш</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for appeal  in appeal_list %}
+                                    <tr>
+
+                                    <td>{{ appeal.id }}</td>
+                                    <td>
+                                        {% if appeal.is_answered %}
+                                            <span class="badge bg-info">Бажарилган</span>
+                                        {% else %}
+                                            <span class="badge bg-danger">Янги</span>
+                                        {% endif %}
+
+                                    </td>
+                                    <td>{{ appeal.created }}</td>
+                                    <td>{{ appeal.name }}</td>
+                                    <td>{{ appeal.company }}/td>
+
+                                    <td>{{ appeal.appeal }}</td>
+
+                                    <td>
+
+                                        <button class="btn btn-success" data-bs-toggle="modal"
+                                                data-bs-target=".bs-example-modal-md">Жавоб бериш
+                                        </button>
+                                    </td>
+
+
+                                {% endfor %}
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog"
+                 aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myExtraLargeModalLabel">Extra large
+                                modal</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h6 class="fs-16 my-3">Graphic Design</h6>
+                            <div class="d-flex mt-2">
+                                <div class="flex-shrink-0">
+                                    <i class="ri-checkbox-circle-fill text-success"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-2 ">
+                                    <p class="text-muted mb-0">Opposites attract, and that’s a fact. It’s in our nature
+                                        to be interested in the unusual, and that’s why using contrasting colors in
+                                        Graphic Design is a must. It’s eye-catching, it makes a statement, it’s
+                                        impressive graphic design. Increase or decrease the letter spacing
+                                        depending.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-2">
+                                <div class="flex-shrink-0">
+                                    <i class="ri-checkbox-circle-fill text-success"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-2 ">
+                                    <p class="text-muted mb-0">Trust fund seitan letterpress, keytar raw denim keffiyeh
+                                        etsy art party before they sold out master cleanse gluten-free squid scenester
+                                        freegan cosby sweater.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-2">
+                                <div class="flex-shrink-0">
+                                    <i class="ri-checkbox-circle-fill text-success"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-2 ">
+                                    <p class="text-muted mb-0">Just like in the image where we talked about using
+                                        multiple fonts, you can see that the background in this graphic design is
+                                        blurred. Whenever you put text on top of an image, it’s important that your
+                                        viewers can understand.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-2">
+                                <div class="flex-shrink-0">
+                                    <i class="ri-checkbox-circle-fill text-success"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-2 ">
+                                    <p class="text-muted mb-0">Keytar raw denim keffiyeh etsy art party before they sold
+                                        out master cleanse gluten-free squid scenester freegan cosby sweater.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="javascript:void(0);" class="btn btn-link link-success fw-medium"
+                               data-bs-dismiss="modal"><i class="ri-close-line me-1 align-middle"></i> Close</a>
+                            <button type="button" class="btn btn-primary ">Save changes</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+        </div>
+        <!-- End Page-content -->
+        {% block footer %}
+            {% include "partials/footer.html" %}
+        {% endblock footer %}
+    </div>
+    <!-- end main content-->
+{% endblock content %}
+
+{% block extra_js %}
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!--datatable js-->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+    <script src="{% static 'js/pages/datatables.init.js' %}"></script>
+
+    <!-- apexcharts -->
+    <script src="{% static 'libs/apexcharts/dist/apexcharts.min.js' %}"></script>
+
+    <!-- Vector map-->
+    <script src="{% static 'libs/jsvectormap/dist/js/jsvectormap.min.js' %}"></script>
+    <script src="{% static 'libs/jsvectormap/dist/maps/world-merc.js' %}"></script>
+
+    <!--Swiper slider js-->
+    <script src="{% static 'libs/swiper/swiper-bundle.min.js' %}"></script>
+
+    <!-- Dashboard init -->
+    <script src="{% static 'js/pages/dashboard-ecommerce.init.js' %}"></script>
+
+
+
+{% endblock extra_js %}
